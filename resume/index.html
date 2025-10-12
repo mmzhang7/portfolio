@@ -4,18 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maggie Zhang - Resume</title>
-    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="../style.css">
+    
+</head>
+<body>
     <nav>
         <ul>
             <li><a href="../index.html">Home</a></li>
             <!--<li><a href="../about.html">About Me</a></li>-->
             <li><a href="../projects/index.html">Projects</a></li>
-            <li><a href="../contact/index.html">Contact</a></li>
+            <li><a href="../contact/index.html" >Contact</a></li>
             <li><a target="_blank" href="https://github.com/mmzhang7">Profile</a></li>
-            <li><a href="../resume/index.html">Resume</a></li>
+            <li><a href="../resume/index.html" class = "current">Resume</a></li>
         </ul>
-</head>
-<body>
+    </nav>
+
     <header style="text-align:center;">
     <h1>Maggie Zhang</h1>
     <p>
@@ -26,97 +29,125 @@
     </p>
   </header>
 
-  <section id="education">
-    <h2>Education</h2>
-    <article>
-      <header>
-        <h3>University of California, San Diego</h3>
-        <p>La Jolla, CA</p>
-      </header>
-      <p>B.S. Data Science, B.S. Cognitive Science Spec. Machine Learning &amp; Neural Computation <br>
-        Minor in Linguistics and Mathematics</p>
-      <p><time datetime="2023-09">September 2023</time> – <time datetime="2027-03">March 2027</time></p>
-    </article>
-  </section>
+ <section id="education">
+        <h2>Education</h2>
+        <article>
+            <header>
+                <div class="left">
+                    <h3>University of California, San Diego</h3>
+                    <p>La Jolla, CA</p>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2023-09">September 2023</time> – <time datetime="2027-03">March 2027</time></p>
+                </div>
+            </header>
+            <p>B.S. Data Science, B.S. Cognitive Science Spec. Machine Learning & Neural Computation <br>
+               Minor in Linguistics and Mathematics</p>
+        </article>
+    </section>
 
-  <section id="experience">
-    <h2>Experience</h2>
+    <section id="experience">
+        <h2>Experience</h2>
 
-    <article>
-      <header>
-        <h3>AI Brain Programmer</h3>
-        <p>Swartz Center for Computational Neuroscience — La Jolla, CA</p>
-        <time datetime="2025-07">July 2025</time> – <time datetime="2025-10">Present</time>
-      </header>
-      <ul>
-        <li>Supported QA and development of <b>EEGLAB</b> (MATLAB, Python) and <b>NEMAR</b> tools for deep learning and data repositories.</li>
-        <li>Curated and annotated <b>neuroimaging time series data</b> for sharing, storage, and analysis.</li>
-      </ul>
-    </article>
+        <article>
+            <header>
+                <div class="left">
+                    <h3>AI Brain Programmer</h3>
+                    <p>Swartz Center for Computational Neuroscience — La Jolla, CA</p>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2025-07">July 2025</time> – <time datetime="2025-10">Present</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Supported QA and development of <b>EEGLAB</b> (MATLAB, Python) and <b>NEMAR</b> tools for deep learning and data repositories.</li>
+                <li>Curated and annotated <b>neuroimaging time series data</b> for sharing, storage, and analysis.</li>
+            </ul>
+        </article>
 
-    <article>
-      <header>
-        <h3>Data Science Intern</h3>
-        <p>Cenergy Power — Aliso Viejo, CA</p>
-        <time datetime="2025-06">June 2025</time> – <time datetime="2025-10">Present</time>
-      </header>
-      <ul>
-        <li>Identified potential solar farm sites using geospatial analysis and <b>AI tools</b>.</li>
-        <li>Performed <b>sentiment analysis</b> on community attitudes toward clean energy.</li>
-        <li>Automated integration of data sources into solar power pipelines.</li>
-      </ul>
-    </article>
+        <article>
+            <header>
+                <div class="left">
+                    <h3>Data Science Intern</h3>
+                    <p>Cenergy Power — Aliso Viejo, CA</p>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2025-06">June 2025</time> – <time datetime="2025-10">Present</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Identified potential solar farm sites using geospatial analysis and <b>AI tools</b>.</li>
+                <li>Performed <b>sentiment analysis</b> on community attitudes toward clean energy.</li>
+                <li>Automated integration of data sources into solar power pipelines.</li>
+            </ul>
+        </article>
 
-    <article>
-      <header>
-        <h3>Bioinformatics Intern</h3>
-        <p>SciCrunch — La Jolla, CA</p>
-        <time datetime="2024-06">June 2024</time> – <time datetime="2024-09">September 2024</time>
-      </header>
-      <ul>
-        <li>Refactored <b>Python regex scripts</b> to improve extraction of RRIDs.</li>
-        <li>Consolidated BDSC fly catalog for NIH Flies RRID Curation Project.</li>
-      </ul>
-    </article>
+        <article>
+            <header>
+                <div class="left">
+                    <h3>Bioinformatics Intern</h3>
+                    <p>SciCrunch — La Jolla, CA</p>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2024-06">June 2024</time> – <time datetime="2024-09">September 2024</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Refactored <b>Python regex scripts</b> to improve extraction of RRIDs.</li>
+                <li>Consolidated BDSC fly catalog for NIH Flies RRID Curation Project.</li>
+            </ul>
+        </article>
 
-    <article>
-      <header>
-        <h3>Data Curator Intern</h3>
-        <p>UCSD FAIR Data Informatics Lab — La Jolla, CA</p>
-        <time datetime="2024-01">January 2024</time> – <time datetime="2025-03">March 2025</time>
-      </header>
-      <ul>
-        <li>Automated bioinformatics extraction from 100,000+ scientific articles, reducing manual effort by 70%.</li>
-        <li>Developed <b>Google Apps Script</b> workflows for efficient dataset processing and management.</li>
-      </ul>
-    </article>
-  </section>
+        <article>
+            <header>
+                <div class="left">
+                    <h3>Data Curator Intern</h3>
+                    <p>UCSD FAIR Data Informatics Lab — La Jolla, CA</p>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2024-01">January 2024</time> – <time datetime="2025-03">March 2025</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Automated bioinformatics extraction from 100,000+ scientific articles, reducing manual effort by 70%.</li>
+                <li>Developed <b>Google Apps Script</b> workflows for efficient dataset processing and management.</li>
+            </ul>
+        </article>
+    </section>
 
-  <section id="projects">
-    <h2>Projects</h2>
+    <section id="projects">
+        <h2>Projects</h2>
 
-    <article>
-      <header>
-        <h3><a href="https://mmzhang7.github.io/Recipes-Project/">Culinary Computing: Recipe Analysis &amp; Prediction</a></h3>
-        <time datetime="2025-05">May 2025</time> – <time datetime="2025-10">Present</time>
-      </header>
-      <ul>
-        <li>Built <b>Random Forest</b> regression with GridSearchCV; optimized features and performed fairness analysis.</li>
-        <li>Conducted missingness analysis and <b>permutation testing</b>; published results with interactive Plotly dashboards.</li>
-      </ul>
-    </article>
+        <article>
+            <header>
+                <div class="left">
+                    <h3><a href="https://mmzhang7.github.io/Recipes-Project/">Culinary Computing: Recipe Analysis & Prediction</a></h3>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2025-05">May 2025</time> – <time datetime="2025-10">Present</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Built <b>Random Forest</b> regression with GridSearchCV; optimized features and performed fairness analysis.</li>
+                <li>Conducted missingness analysis and <b>permutation testing</b>; published results with interactive Plotly dashboards.</li>
+            </ul>
+        </article>
 
-    <article>
-      <header>
-        <h3><a href="https://github.com/mmzhang7/Char-RNN-Tuning-on-Tiny-Shakespeare-and-Agatha-Christie">The Mysterious Affair of Char RNN</a></h3>
-        <time datetime="2025-01">January 2025</time> – <time datetime="2025-03">March 2025</time>
-      </header>
-      <ul>
-        <li>Rebuilt and fine-tuned <b>Char RNN</b> model in PyTorch.</li>
-        <li>Trained on Shakespeare and Agatha Christie datasets; applied NLP and Information Theory analysis.</li>
-      </ul>
-    </article>
-  </section>
+        <article>
+            <header>
+                <div class="left">
+                    <h3><a href="https://github.com/mmzhang7/Char-RNN-Tuning-on-Tiny-Shakespeare-and-Agatha-Christie">The Mysterious Affair of Char RNN</a></h3>
+                </div>
+                <div class="right">
+                    <p class="date-range"><time datetime="2025-01">January 2025</time> – <time datetime="2025-03">March 2025</time></p>
+                </div>
+            </header>
+            <ul>
+                <li>Rebuilt and fine-tuned <b>Char RNN</b> model in PyTorch.</li>
+                <li>Trained on Shakespeare and Agatha Christie datasets; applied NLP and Information Theory analysis.</li>
+            </ul>
+        </article>
+    </section>
 
   <section id="skills">
     <h2>Technical Skills</h2>

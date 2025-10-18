@@ -131,8 +131,20 @@ article header .right {
 
 .date-range {
     font-size: 0.85em;
+    font-style: italic;
     white-space: nowrap; 
     margin: 0;
+}
+
+@media (prefers-color-scheme: dark) {
+  .date-range {
+    color: oklch(80% 5% 200);
+  }
+}
+@media (prefers-color-scheme: light) {
+  .date-range {
+    color: oklch(40% 5% 200);
+  }
 }
 
 article ul {

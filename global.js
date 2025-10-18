@@ -35,3 +35,59 @@ for (let p of pages) {
   }
    
 }
+
+document.body.insertAdjacentHTML(
+  'afterbegin',
+  `
+	<label class="color-scheme">
+		Theme:
+		<select>
+			<option value="light dark">Automatic</option>
+      <option value="light">Light</option>
+      <option value="dark">Dark</option>
+		</select>
+	</label>`,
+);
+
+const select = document.querySelector(".color-scheme select");
+
+if ("colorScheme" in localStorage) {
+  document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
+  select.value = localStorage.colorScheme;
+}
+
+select.addEventListener("input", function (event) {
+  console.log("color scheme changed to", event.target.value);
+  document.documentElement.style.setProperty("color-scheme", event.target.value);
+  localStorage.colorScheme = event.target.value;
+});
+
+let prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
+let autoOption = select.querySelector('option[value="light dark"]');
+autoOption.textContent = prefersDark
+  ? "Automatic (Dark)"
+  : "Automatic (Light)";
+  
+matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
+  let autoOption = select.querySelector('option[value="light dark"]');
+  autoOption.textContent = e.matches
+    ? "Automatic (Dark)"
+    : "Automatic (Light)";
+});
+
+let form = document.querySelector("form");
+form?.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let data = new FormData(form);
+  let params = [];
+
+  // Encode all form fields
+  for (let [name, value] of data) {
+    params.push(`${name}=${encodeURIComponent(value)}`);
+    console.log(name, value);
+  }
+
+  let url = `${form.action}?${params.join("&")}`;
+  location.href = url;
+});

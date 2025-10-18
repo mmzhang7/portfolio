@@ -44,6 +44,7 @@ nav a.current {
 nav a:hover {
   border-bottom: 0.4em solid var(--color-accent);
   color: var(--color-accent);
+  background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
 }
 
 form, input, textarea, button {
@@ -98,7 +99,6 @@ section {
     padding: 0 1em;
 }
 
-/* Section headers */
 section h2 {
     font-size: 2em;
     border-bottom: 2px solid var(--color-accent);
@@ -136,7 +136,6 @@ article header .right {
     margin: 0;
 }
 
-/* Lists */
 article ul {
     grid-column: 1 / -1; 
     margin: 0.5em 0 0 1em;
@@ -174,4 +173,16 @@ article ul li {
     padding: 0.5em 0.7em;
     border-radius: 5px;
     font-size: 0.95em;
+}
+
+.color-scheme {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 80%;
+  font-family: inherit;
+}
+
+.color-scheme select {
+  font: inherit;
 }

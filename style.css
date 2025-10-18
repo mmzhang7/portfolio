@@ -3,6 +3,7 @@
 }
 
 html {
+  color-scheme: dark;
   accent-color: var(--color-accent);
 }
 
@@ -20,7 +21,7 @@ body {
 nav {
   display: flex;
   margin-bottom: 1.5em; 
-  border-bottom: 1px solid oklch(80% 3% 200);
+  border-bottom: 1px solid oklch(50% 10% 200 / 40%);
 }
 nav ul, nav li {
   flex:1;
@@ -35,7 +36,7 @@ nav a {
 }
 
 nav a.current {
-  border-bottom: 0.4em solid oklch(80% 3% 200); /* thicker bottom border */
+  border-bottom: 0.4em solid oklch(50% 10% 200 / 40%); /* thicker bottom border */
   padding-bottom: 0.1em;
   font-weight: bold;
 }

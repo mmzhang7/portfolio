@@ -131,7 +131,6 @@ article header .right {
 
 .date-range {
     font-size: 0.85em;
-    color: oklch(30% 10% 120);
     white-space: nowrap; 
     margin: 0;
 }

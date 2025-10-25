@@ -197,3 +197,47 @@ article ul li {
 .color-scheme select {
   font: inherit;
 }
+
+.github-stats-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.github-stats-section h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .github-stats-section {
+    color: oklch(80% 5% 200);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .github-stats-section {
+    color: oklch(40% 5% 200);
+  }
+}
+.profile-stats {
+  padding: 1.5rem;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr; /* 4 equal columns */
+  gap: 10px; /* optional spacing */
+}
+
+dt {
+  grid-row: 1; /* All <dt> in first row */
+}
+
+dd {
+  grid-row: 2; /* All <dd> in second row */
+}

@@ -1,0 +1,75 @@
+[
+    {
+        "title": "Portfolio Website",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Website built using HTML, CSS, and JavaScript to showcase my projects and skills. Features a responsive design and interactive elements."
+    },
+    {
+        "title": "Spectral Topoplot - EEGLAB",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Mini Project to create a spectral topoplot function for EEGLAB using MATLAB. The function visualizes the distribution of power across the scalp for different frequency bands."
+    },
+    {
+        "title": "Culinary Computing: Recipe Analysis & Prediction",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Engineered predictive features using scikit-learn pipelines to forecast recipe cook time, then performed fairness analysis on transformed features and optimized model."
+    },
+    {
+        "title": "Youtube Comments Analysis",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed a natural language processing pipeline to analyze and visualize sentiments in YouTube comments. Utilized Python libraries such as NLTK and Matplotlib."
+    },
+    {
+        "title": "The Case of the Predictable Detective: Surprisal as a Stylistic Forensic",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Quantified the readability, coherence, and uniformity of style of a text by its surprisal distributions, developing a pipeline for quantitative, computational literary analysis. Includes genre-specific surprisal contour visualizations and a normalization method for cross-text comparison visualizations."
+    },
+    {
+        "title": "The Mysterious Affair of Char RNN",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Rebuilt and finetuned Char RNN model in PyTorch, trained model on Shakespeare and self-extracted Agatha Christie text datasets, and applied NLP and Information Theory concepts to perform deep analysis of Char RNN and NLTK results."
+    },
+    {
+        "title": "Pariatur numquam repudiandae voluptatibus!",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Explored the use of EEG signals to detect deception by analyzing brainwave patterns associated with truth and lying. Assessed the feasibility of using EEG-based lie detection in real-world applications."
+    },
+    {
+        "title": "The Simpsons PCA Reconstruction",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed an image classification pipeline using NumPy to preprocess and classify characters from The Simpsons dataset using Principle Components Analysis (PCA) for dimensionality reduction and Support Vector Machines (SVM) for classification, achieving a 80% accuracy rate."
+    },
+    {
+        "title": "Education & Life Expectancy EDA",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Conducted EDA on WHO life expectancy dataset, analyzing impacts of schooling, vaccination rates, and infant mortality on life expectancy using pandas, Matplotlib, NumPy, SciPy, and Seaborn."
+    },
+    {
+        "title": "Coding Helper Chatbot",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed a chatbot using Python and natural language processing techniques to assist users with coding-related queries. The chatbot can understand and respond to questions about programming concepts and syntax."
+    },
+    
+    {
+        "title": "RGB Image Processor",
+        "year": "2024",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Developed an image processing structure with optimized methods for different image transformations such as gaussian blur, brightness adjustment, grayscale, rotation, and negation, then implemented K-nearest Neighbors (KNN) machine learning classifier to predict image labels based on their pixel RGB adjacency and similarity to nearest training data."
+    },
+    {
+        "title": "Friends TV Show Analysis",
+        "year": "2023",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Performed standardized confidence interval and permutation tests on data about Friends teleplay writers and directors to show the correlation between experience and episode popularity."
+    }
+]

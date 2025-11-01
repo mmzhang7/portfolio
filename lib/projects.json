@@ -6,6 +6,18 @@
         "description": "Website built using HTML, CSS, and JavaScript to showcase my projects and skills. Features a responsive design and interactive elements."
     },
     {
+        "title": "Cravings and Costs: Shopping Smart Near UCSD Campus",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Using advanced visualization . Features a responsive design and interactive elements."
+    },
+    {
+        "title": "Portfolio Website",
+        "year": "2025",
+        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
+        "description": "Website built using HTML, CSS, and JavaScript to showcase my projects and skills. Features a responsive design and interactive elements."
+    },
+    {
         "title": "Spectral Topoplot - EEGLAB",
         "year": "2025",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
@@ -52,19 +64,6 @@
         "year": "2024",
         "image": "https://vis-society.github.io/labs/2/images/empty.svg",
         "description": "Conducted EDA on WHO life expectancy dataset, analyzing impacts of schooling, vaccination rates, and infant mortality on life expectancy using pandas, Matplotlib, NumPy, SciPy, and Seaborn."
-    },
-    {
-        "title": "Coding Helper Chatbot",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Developed a chatbot using Python and natural language processing techniques to assist users with coding-related queries. The chatbot can understand and respond to questions about programming concepts and syntax."
-    },
-    
-    {
-        "title": "RGB Image Processor",
-        "year": "2024",
-        "image": "https://vis-society.github.io/labs/2/images/empty.svg",
-        "description": "Developed an image processing structure with optimized methods for different image transformations such as gaussian blur, brightness adjustment, grayscale, rotation, and negation, then implemented K-nearest Neighbors (KNN) machine learning classifier to predict image labels based on their pixel RGB adjacency and similarity to nearest training data."
     },
     {
         "title": "Friends TV Show Analysis",

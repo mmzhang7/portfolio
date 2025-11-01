@@ -12,8 +12,11 @@ let pages = [
   { url: "https://github.com/mmzhang7", title: "Profile" },
 ];
     
-let nav = document.createElement("nav");
-document.body.prepend(nav);
+let nav = document.querySelector('nav');
+if (!nav) {
+  nav = document.createElement("nav");
+  document.body.prepend(nav);
+}
 
 const BASE_PATH = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
   ? "/"                  // Local server
@@ -39,41 +42,71 @@ for (let p of pages) {
 document.body.insertAdjacentHTML(
   'afterbegin',
   `
-	<label class="color-scheme">
-		Theme:
-		<select>
-			<option value="light dark">Automatic</option>
+  <label class="color-scheme">
+    Theme:
+    <select>
+      <option value="auto">Automatic</option>
       <option value="light">Light</option>
       <option value="dark">Dark</option>
-		</select>
-	</label>`,
+    </select>
+  </label>
+  `
 );
 
 const select = document.querySelector(".color-scheme select");
 
-if ("colorScheme" in localStorage) {
-  document.documentElement.style.setProperty("color-scheme", localStorage.colorScheme);
-  select.value = localStorage.colorScheme;
+function systemPrefersDark() {
+  return window.matchMedia("(prefers-color-scheme: dark)").matches;
 }
 
-select.addEventListener("input", function (event) {
-  console.log("color scheme changed to", event.target.value);
-  document.documentElement.style.setProperty("color-scheme", event.target.value);
-  localStorage.colorScheme = event.target.value;
+
+function applyTheme(value) {
+  if (value === "auto") {
+    document.documentElement.removeAttribute("data-theme");
+    document.body.style.backgroundColor = "";
+    document.body.style.color = "";
+  } else if (value === "light") {
+    document.documentElement.setAttribute("data-theme", "light");
+    document.body.style.backgroundColor = "white";
+    document.body.style.color = "black";
+  } else if (value === "dark") {
+    document.documentElement.setAttribute("data-theme", "dark");
+    document.body.style.backgroundColor = "black";
+    document.body.style.color = "white";
+  }
+}
+
+
+let savedTheme = localStorage.getItem("theme") || "auto";
+select.value = savedTheme;
+applyTheme(savedTheme);
+
+
+select.addEventListener("input", (e) => {
+  const value = e.target.value;
+  localStorage.setItem("theme", value);
+  applyTheme(value);
 });
 
-let prefersDark = matchMedia("(prefers-color-scheme: dark)").matches;
-let autoOption = select.querySelector('option[value="light dark"]');
-autoOption.textContent = prefersDark
-  ? "Automatic (Dark)"
-  : "Automatic (Light)";
-  
-matchMedia("(prefers-color-scheme: dark)").addEventListener("change", (e) => {
-  let autoOption = select.querySelector('option[value="light dark"]');
-  autoOption.textContent = e.matches
+
+function updateAutoLabel() {
+  const autoOption = select.querySelector('option[value="auto"]');
+  if (!autoOption) return; // safeguard
+
+  autoOption.textContent = systemPrefersDark()
     ? "Automatic (Dark)"
     : "Automatic (Light)";
-});
+
+
+  if (select.value === "auto") applyTheme("auto");
+}
+
+
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", updateAutoLabel);
+
+
+updateAutoLabel();
+
 
 let form = document.querySelector("form");
 form?.addEventListener("submit", (event) => {
@@ -110,11 +143,12 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
   containerElement.innerHTML = '';
   for (let proj of project) {
     const article = document.createElement('article');
-      article.innerHTML = `
-        <${headingLevel}>${proj.title}</${headingLevel}>
-        <img src="${proj.image}" alt="${proj.title}">
-        <p>${proj.description}</p>
-      `;
+    article.innerHTML = `
+      <${headingLevel}>${proj.title}</${headingLevel}>
+      <img src="${proj.image}" alt="${proj.title}">
+      <p>${proj.description}</p>
+      <span class="year">${proj.year}</span>
+    `;
     containerElement.appendChild(article);
   }
 }

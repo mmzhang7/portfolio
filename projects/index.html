@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects - Maggie Zhang</title>
     <link rel="stylesheet" href="../style.css">
-    
+
 </head>
+
 <body>
-    <nav>
-        <ul>
-            <!--<li><a href="../index.html">Home</a></li>-->
-            <!--<li><a href="../about.html">About Me</a></li>-->
-            <!--<li><a href="../projects/index.html">Projects</a></li>-->
-            <!--<li><a href="../contact/index.html">Contact</a></li>-->
-            <!--<li><a target="_blank" href="https://github.com/mmzhang7">Profile</a></li>-->
-            <!--<li><a href="../resume/index.html">Resume</a></li>-->
-        </ul>
-    </nav>
 
     <h1 class="projects-title">Projects</h1>
-    <div id="project_count" class = "project-count"></div>
-    <h2>Latest Projects</h2>
-    <div class="projects">
-    <!-- Dynamically added content will appear here -->
+
+    <div class="chart-container">
+        <svg id="projects-pie-plot" viewBox="-50 -50 100 100">
+        </svg>
+        <ul class="legend"></ul>
     </div>
+    <input class="searchBar" type="search" aria-label="Search projects" placeholder="🔍 Search projects…" />
+
+    <div id="project_count" class="project-count"></div>
+    <h2>Latest Projects</h2>
+
+    <div class="projects">
+        <!-- Dynamically added content will appear here -->
+    </div>
+
     <script src="../global.js" type="module"></script>
     <script src="projects.js" type="module"></script>
     <script src="../index.js" type="module" defer></script>
 </body>
+
 </html>

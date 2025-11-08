@@ -10,6 +10,7 @@ let pages = [
   { url: "contact/", title: "Contact" },
   { url: "resume/", title: "Resume" },
   { url: "https://github.com/mmzhang7", title: "Profile" },
+  { url: "meta/", title: "Meta" }
 ];
     
 let nav = document.querySelector('nav');
@@ -145,10 +146,19 @@ export function renderProjects(project, containerElement, headingLevel = 'h2') {
     const article = document.createElement('article');
     article.innerHTML = `
       <${headingLevel}>${proj.title}</${headingLevel}>
-      <img src="${proj.image}" alt="${proj.title}">
+      <div class="image-wrapper">
+        <img src="${proj.image}" alt="${proj.title}">
+      </div>
       <p>${proj.description}</p>
       <span class="year">${proj.year}</span>
     `;
+    const img = article.querySelector('img');
+    if (proj.link) {
+      img.style.cursor = 'pointer';
+      img.addEventListener('click', () => {
+        window.open(proj.link, '_blank');
+      });
+    }
     containerElement.appendChild(article);
   }
 }

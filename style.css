@@ -11,6 +11,7 @@
 html[data-theme="dark"] {
 
   --special-font: oklch(88% 5% 200);
+  --border-color: oklch(85.496% 0.04107 200.393 / 0.4);
   --card-background: oklch(46.054% 0.04973 195.623 / 0.3);
   --hover-background: oklch(61.689% 0.08421 152.013 / 0.5);
   --dropdown-background: oklch(0% 0 0);
@@ -105,17 +106,53 @@ form button {
   padding: 1em;
   background-color: var(--card-background);
   gap: 1em;
+  overflow: visible;
+  position: relative;
 }
 
 .projects h2 {
   margin: 0;
 }
 
-.projects img {
+.image-wrapper {
   width: 100%;
-  height: fit-content;
-  object-fit: contain;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.5em;
+  position: relative;
+  isolation: isolate;
+  z-index: 0;
+}
 
+.image-wrapper::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: inherit;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease, box-shadow 0.3s ease;
+  transform-origin: center;
+  position: relative;
+  z-index: 1;
+  border-radius: inherit;
+}
+
+.image-wrapper:hover {
+  overflow: visible;
+  z-index: 10;
+}
+
+.image-wrapper:hover img {
+  transform: scale(1.18);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .projects article .year {
@@ -338,4 +375,125 @@ dd {
   background-color: var(--dropdown-background);
   color: var(--special-font);
   font-family: inherit;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 10px; /* spacing between columns */
+  margin: 1rem 0;
+  padding: 1.5rem;
+  background: var(--card-background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.stats dt {
+  grid-row: 1; /* all dt in the first row */
+  text-align: center;
+  font-weight: 600;
+  color: var(--special-font);
+  margin: 0;
+}
+
+.stats dd {
+  grid-row: 2; /* all dd in the second row */
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+}
+
+.stats abbr {
+  text-decoration: none;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+.stats dd span {
+  cursor: help;
+  border-bottom: 1px dotted var(--border-color);
+}
+
+.gridlines line {
+  stroke: color-mix(in oklch, var(--border-color) 40%, var(--contrast-color) 60%); 
+  stroke-opacity: 0.6; 
+  shape-rendering: crispEdges;
+}
+
+.gridlines path {
+  stroke: none; 
+}
+
+.tooltip {
+  position: fixed;
+  pointer-events: none; 
+  background: var(--card-background);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid var(--border-color);
+  z-index: 1000; 
+  font-size: 0.9rem;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5rem 1rem;
+}
+
+circle {
+  transition: 200ms;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+circle:hover {
+  transform: scale(1.5);
+}
+
+dl.info {
+  display: grid;
+  grid-template-columns: auto 1fr; 
+  grid-auto-rows: auto;            
+  gap: 0.25rem 0.5rem; 
+  transition-duration: 500ms;
+  transition-property: opacity, visibility;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+  opacity: 0;
+  visibility: hidden;
+}
+
+dl.info dt {
+  text-align: left;
+  font-weight: 600;
+}
+
+dl.info dd {
+  margin: 0;           
+  text-align: left;    
+}
+
+@keyframes marching-ants {
+  to {
+    stroke-dashoffset: -8; /* 5 + 3 */
+  }
+}
+
+.selection {
+  fill-opacity: 0.408;
+  stroke: var(--contrast-color);
+  stroke-opacity: 0.7;
+  stroke-dasharray: 5 3;
+  animation: marching-ants 2s linear infinite;
+}
+
+@keyframes marching-ants {
+  to { stroke-dashoffset: -8; }
+}
+
+circle.selected {
+  fill: #ff6b6b;
 }

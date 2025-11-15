@@ -1,10 +1,10 @@
 [
     {
-        "title": "Portfolio Website",
+        "title": "Bikewatching in Boston",
         "year": "2025",
-        "image": "/images/portfolio.png",
-        "link": "https://mmzhang7.github.io/portfolio/",
-        "description": "Website built using HTML, CSS, and JavaScript to showcase my projects and skills. Features a responsive design and interactive elements."
+        "image": "/images/bikesharing.png",
+        "link": "https://mmzhang7.github.io/bikewatching/",
+        "description": "Website built using HTML, CSS, and JavaScript to showcase bikesharing data in Boston. Features a responsive design and interactive elements."
     },
     {
         "title": "Cravings and Costs: Shopping Smart Near UCSD Campus",

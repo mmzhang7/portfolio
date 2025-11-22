@@ -2,43 +2,62 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meta - Maggie Zhang</title>
-    <link rel="stylesheet" href="../style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meta - Maggie Zhang</title>
+  <link rel="stylesheet" href="../style.css">
 
 </head>
 
 <body>
-    <h1> Meta </h1>
-    <p>This page includes stats about the code of this website.</p>
-    <div id="stats"></div>
+  <h1> Meta </h1>
+  <p>This page includes stats about the code of this website.</p>
+  <div id="stats"></div>
 
-    <h2>Commits by time of day</h2>
+  <h2>Commits by time of day</h2>
+
+  <div id="scrolly-1">
+  <div id="scatter-story"></div>
+  <div id="scatter-plot">
     <div id="chart"></div>
-    <dl id="commit-tooltip" class="info tooltip">
-  <dt>Commit</dt>
-  <dd>
-    <a href="" id="commit-link" target="_blank"></a>
-  </dd>
-  <dt>Time</dt>
-  <dd id="commit-time"></dd>
+  <dl id="commit-tooltip" class="info tooltip">
+    <dt>Commit</dt>
+    <dd>
+      <a href="" id="commit-link" target="_blank"></a>
+    </dd>
+    <dt>Time</dt>
+    <dd id="commit-time"></dd>
 
-  <dt>Date</dt>
-  <dd id="commit-date"></dd>
+    <dt>Date</dt>
+    <dd id="commit-date"></dd>
 
-  <dt>Author</dt>
-  <dd id="commit-author"></dd>
+    <dt>Author</dt>
+    <dd id="commit-author"></dd>
 
-  <dt>Lines Edited</dt>
-  <dd id="commit-lines"></dd>
-</dl>
-<p id="selection-count">No commits selected</p>
-<dl id="language-breakdown" class="stats"></dl>
+    <dt>Lines Edited</dt>
+    <dd id="commit-lines"></dd>
+  </dl>
+  <p id="selection-count">No commits selected</p>
+  <dl id="language-breakdown" class="stats"></dl>
+  </div>
+</div>
 
-    
-    <script src="../global.js" type="module"></script>
-    <script src="main.js" type="module"></script>
+  
+
+  <dl id="files">
+    <!-- we want the following structure for each file:
+  <div>
+    <dt>
+      <code>{file.name}</code>
+    </dt>
+    <dd>{file.lines.length} lines</dd>
+  </div>
+  -->
+  </dl>
+
+  <script src="../global.js" type="module"></script>
+  <script src="main.js" type="module"></script>
+  
 </body>
 
 </html>
